@@ -27,4 +27,11 @@ describe(Place) do
     end
   end
 
+  describe(".clear") do
+    it("empties out all of the saved places") do
+      Place.new("New York").save()
+      Place.clear()
+      expect(Place.all()).to(eq([]))
+    end
+  end
 end
