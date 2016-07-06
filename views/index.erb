@@ -1,0 +1,18 @@
+<h1>Your Places!</h1>
+
+<p>Here are the places you've been:</p>
+
+<ul>
+  <% @places.each() do |place| %>
+  <li><%= place.list() %></li>
+  <% end %>
+</ul>
+
+<p>Add another place!</p>
+
+<form action="/confirmation" method="post">
+  <label for="place">Place</label>
+  <input require id="place" name="place" type="text">
+
+  <button type="submit">Add place</button>
+</form>
